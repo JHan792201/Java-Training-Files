@@ -1,0 +1,74 @@
+﻿package com;
+
+public class CarApp {
+	//Properties of car - Instance variable
+	int carId;
+	String color;
+	int wheels;
+	
+	static String cr = "1238791283";
+	
+	//no-arg Constructor	
+	CarApp(){
+		System.out.println("Object created");
+	}
+	
+	//Parameterized Constructor using this keyword
+	CarApp(int carId, String color, int wheels)
+	{
+		//calling the default constructor using this keyword
+		this();
+		this.carId = carId;
+		this.color = color;
+		this.wheels = wheels;
+	}
+	
+	CarApp(int car, String col)
+	{
+		carId = car;
+		color = col;
+	}
+	
+	//Methods of car
+	void start()
+	{
+		System.out.println("Car Starting");
+	}
+	
+	void stop()
+	{
+		System.out.println("Car Stopping");
+	}
+	
+	void display()
+	{
+		String company = "ABC Car Showroom"; //Local variable
+		System.out.println("Car Id is " + carId);
+		System.out.println("Color of the car is" + color);
+		System.out.println("Number of wheels" + wheels);
+		System.out.println("Cars owned by " + company);
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		//Creating 1st object
+		//new keyword allocates memory to the object
+		//Calling default Constructor
+		CarApp car1 = new CarApp();
+		car1.carId = 001;
+		car1.color = "Red";
+		car1.wheels = 4;
+		System.out.println("Car 1 object is created");
+		car1.display();
+		car1.start();
+		car1.stop();
+		//Calling 3 parameter constructor
+		CarApp car2 = new CarApp(2,"Blue",4);
+		car2.display();
+		
+	}
+
+}
+

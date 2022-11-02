@@ -1,0 +1,25 @@
+﻿package com;
+
+public class EclipseDemo1 {
+	
+	public void Mymessage()
+	{ 
+		System.out.println("My first method");
+		
+	}
+	
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 5;
+		//MyMessage();
+		
+		// HiThere printing
+		System.out.println("HiThere");
+		// + is used to link the string message with a variable
+		System.out.println("Value of a is " + a);
+		System.out.println("Value of b is " + b + "but I will change the value");
+				
+	}
+
+}
+

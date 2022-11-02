@@ -1,0 +1,22 @@
+﻿package com;
+
+public class CallbyValueDemo {
+	
+	int data = 10; //Instance variable
+	
+	//Parameterized Method - it accepts on int value as parameter
+	void changevalue(int data)
+	{
+		data = data + 10; //Local variable
+		System.out.println("Value of local data" + data); 
+	}
+
+	public static void main(String[] args) {
+		CallbyValueDemo demo = new CallbyValueDemo(); //Creating Object
+		System.out.println("before changing" + demo.data); //10
+		demo.changevalue(50); //Call by value
+		System.out.println("after changing" + demo.data); //10
+	}
+
+}
+
